@@ -20,15 +20,19 @@ public class MainPage extends BasePage {
         verifyUrl("https://catalog.onliner.by");
     }
 
-    public static void logIn() {
+    public static void toEntrance() {
         click(entrance);
+    }
+
+    public static void logIn() {
+        toEntrance();
         text(login, "wavan2012@gmail.com");
         text(lgnPsw, "32423345345bB");
         click(lgnBtn);
     }
 
     public static void logIn(String name, String password) {
-        click(entrance);
+        toEntrance();
         text(login, name);
         text(lgnPsw, password);
         click(lgnBtn);
@@ -40,13 +44,16 @@ public class MainPage extends BasePage {
     }
 
     public static void toCart() {
-        click("//a[@href='https://cart.onliner.by/']");
+        open("https://cart.onliner.by");
     }
 
     public static void toRegisterNP() {
-        click(entrance);
-        click("//a[@href='https://profile.onliner.by/registration']");
+        open("https://profile.onliner.by/registration");
     }
 
+    public static void verifyErrMsg(String message) {
+        isDisplayed(errMsg, message);
+    }
 }
+
 

@@ -38,4 +38,9 @@ public class PositiveTests extends BaseTest {
         RegistrationPage.setChoosePsw("32323233333444");
         RegistrationPage.isDisplayed( getSafetyPsw() ,"Сильный пароль, 14 символов" );
     }
+    @Test
+    public void popUpErrMsg() {
+        MainPage.logIn("wavan","343232423");
+        MainPage.verifyErrMsg("Неверный логин или пароль");
+    }
 }
