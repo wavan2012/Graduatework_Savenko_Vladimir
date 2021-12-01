@@ -1,5 +1,6 @@
 import PageObject.*;
 
+import driver.DriverCreation;
 import org.testng.annotations.Test;
 
 import static PageObject.RegistrationPage.getSafetyPsw;
@@ -16,6 +17,7 @@ public class PositiveTests extends BaseTest {
 
     @Test
     public void safetyPswExamination() {
+        MainPage.openPage();
         MainPage.toRegisterNP();
         RegistrationPage.setChoosePsw("3232323");
         RegistrationPage.isDisplayed( getSafetyPsw() ,"Минимум 8 символов" );
@@ -37,10 +39,13 @@ public class PositiveTests extends BaseTest {
         RegistrationPage.isDisplayed( getSafetyPsw() ,"Сильный пароль, 12 символов" );
         RegistrationPage.setChoosePsw("32323233333444");
         RegistrationPage.isDisplayed( getSafetyPsw() ,"Сильный пароль, 14 символов" );
+        DriverCreation.quitDriver();
     }
     @Test
     public void popUpErrMsg() {
+        MainPage.openPage();
         MainPage.logIn("wavan","343232423");
         MainPage.verifyErrMsg("Неверный логин или пароль");
+        DriverCreation.quitDriver();
     }
 }
