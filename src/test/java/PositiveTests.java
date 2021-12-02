@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import static PageObject.RegistrationPage.getSafetyPsw;
 
-
 public class PositiveTests extends BaseTest {
 
 
