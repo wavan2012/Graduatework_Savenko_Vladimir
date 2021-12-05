@@ -7,7 +7,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import java.awt.*;
 import java.time.Duration;
 
 public class BasePage {

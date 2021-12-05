@@ -6,15 +6,13 @@ import org.testng.annotations.BeforeTest;
 
 
 public class BaseTest {
-    //@BeforeTest
-    //public void beforeTest(){
-    //   MainPage.openPage();
-    //}
+    @BeforeTest
+    public void beforeTest(){
+       MainPage.openPage();
+    }
 
-   // @AfterTest
-    //public void afterTest(){
-    //    DriverCreation.quitDriver();
-   // }
-
-
+    @AfterTest
+    public void afterTest(){
+        DriverCreation.quitDriver();
+    }
 }
