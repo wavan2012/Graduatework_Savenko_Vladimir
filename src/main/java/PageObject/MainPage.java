@@ -51,6 +51,10 @@ public class MainPage extends BasePage {
         open("https://profile.onliner.by/registration");
     }
 
+    public static void catalogNavi(String goTo) {
+
+    }
+
     public static void verifyErrMsg(String message) {
         isDisplayed(errMsg, message);
     }
