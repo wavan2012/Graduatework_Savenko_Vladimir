@@ -13,7 +13,7 @@ public class MainPage extends BasePage {
     private static final By searchField = By.xpath("//input[@type='text' and contains(@class,'search__input')]");
 
     public static void openPage() {
-        open("https://catalog.onliner.by/");
+        open();
     }
 
     public static void verifyMainPage() {
@@ -52,6 +52,7 @@ public class MainPage extends BasePage {
     }
 
     public static void catalogNavi(String goTo) {
+        click("//li/span/span[contains(text(),'"+goTo+"') and contains(@class,'catalog-navigation')]");
 
     }
 

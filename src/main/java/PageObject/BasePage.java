@@ -6,17 +6,22 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import properties.PropertyReader;
 
 import java.time.Duration;
 
-public class BasePage {
+
+public class BasePage extends BaseTest{
     static WebDriver driver;
 
     public BasePage() {
         driver = DriverCreation.getDriver();
     }
+    public static void open(){
+        DriverCreation.getDriver().get(PropertyReader.getProperty("url"));
+    }
 
-    protected static void open(String url) {
+    public static void open(String url) {
         DriverCreation.getDriver().get(url);
     }
 

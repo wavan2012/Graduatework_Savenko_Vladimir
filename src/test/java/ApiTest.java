@@ -34,7 +34,7 @@ public class ApiTest extends BaseTest {
                 given()
                 .get(endpoint)
                 .then().extract()
-                        .response().time()<200);
+                        .response().time()<400);
     }
     @Test()
     public void apiPost() {

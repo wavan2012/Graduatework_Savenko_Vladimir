@@ -1,6 +1,6 @@
-import PageObject.*;
-
-import driver.DriverCreation;
+import PageObject.BaseTest;
+import PageObject.MainPage;
+import PageObject.RegistrationPage;
 import org.testng.annotations.Test;
 
 import static PageObject.RegistrationPage.getSafetyPsw;
@@ -43,4 +43,6 @@ public class PositiveTests extends BaseTest {
         MainPage.logIn("wavan","343232423");
         MainPage.verifyErrMsg("Неверный логин или пароль");
     }
+
+
 }

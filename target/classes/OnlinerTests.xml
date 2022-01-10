@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="PositiveTests"  parallel="tests">
-    <test name="Onliner" >
+<suite name="Onliner"  parallel="tests">
+    <test name="PositiveTests" >
         <classes>
             <class name="PositiveTests"/>
         </classes>
+    </test> <!-- Test -->
+    <test name="ApiTest" >
+            <classes>
+                <class name="ApiTest"/>
+            </classes>
     </test> <!-- Test -->
 </suite>
